@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <title></title>
+    <script>
+        console.log(localStorage.getItem("aaaaa"));
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="http://192.168.1.203:8192/login">登录</a></li>
+        <li><a href="http://192.168.1.203:8192/register">注册</a></li>
+        <li><a href="http://192.168.1.203:8192/register/easy">注册（商户传参数）</a></li>
+        <li><a href="http://192.168.1.203:8192/forgetpassword">忘记密码</a></li>
+        <li><a href="http://192.168.1.203:8192/my">我的应花分期</a></li>
+        <li><a href="http://192.168.1.203:8192/orderdetail">订单详情</a></li>
+        <li><a href="http://192.168.1.203:8192/paysuccess">订单支付成功</a></li>
+    </ul>
+    <h3>填写个人信息</h3>
+    <ul>
+        <li><a href="http://192.168.1.203:8192/baseinfo/open">激活应花分期</a></li>
+        <li><a href="http://192.168.1.203:8192/baseinfo/my">我的应花资料</a></li>
+    </ul>
+    <h3>应花额度不足</h3>
+    <ul>
+        <li><a href="http://192.168.1.203:8192/shortfall/login">登录入口</a></li>
+        <li><a href="http://192.168.1.203:8192/shortfall/open">首次开通入口</a></li>
+    </ul>
+    <h3>开通成功</h3>
+    <ul>
+        <li><a href="http://192.168.1.203:8192/opensuccess/noOrder">无订单状态</a></li>
+        <li><a href="http://192.168.1.203:8192/opensuccess/hasOrder">有订单状态</a></li>
+    </ul>
+    <h3>开通失败</h3>
+    <ul>
+        <li><a href="http://192.168.1.203:8192/openfail/noOrder">无订单状态</a></li>
+        <li><a href="http://192.168.1.203:8192/openfail/hasOrder">有订单状态</a></li>
+    </ul>
+    <h3>还款</h3>
+    <ul>
+        <li><a href="http://192.168.1.203:8192/repayment">分期还款</a></li>
+        <li><a href="http://192.168.1.203:8192/repayment/detail">本次分期明细</a></li>
+    </ul>
+</body>
+</html>

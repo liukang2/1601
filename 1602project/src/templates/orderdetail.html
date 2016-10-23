@@ -1,0 +1,43 @@
+<%if(data){%>
+<div class="order-detail filed-block" style="display: none;">
+    <ul>
+        <li>
+            <label>商品名称</label>
+            <p>Apple iPhone 5 (A1700) 16G 8成新 你要买吗？</p>
+        </li>
+        <li>
+            <label>商品价格</label>
+            <p>4500元</p>
+        </li>
+    </ul>
+</div>
+
+<div class="order-detail filed-block">
+    <ul>
+        <li>
+            <label>首付</label>
+            <p><%=data.downPayment%>元</p>
+        </li>
+        <li>
+            <label>分期金额</label>
+            <p><%=data.amount%>元</p>
+        </li>
+        <li>
+            <label>分期期数</label>
+            <p><%=data.installmentAmount%>期</p>
+        </li>
+        <li>
+            <label>月手续费</label>
+            <p><%=data.monthlyFee%>元</p>
+        </li>
+        <li>
+            <label>每期应还</label>
+            <p><%=data.periodRepay%>元</p>
+        </li>
+        <li>
+            <label>首期还款日</label>
+            <p><%=data.firstRepayDay%></p>
+        </li>
+    </ul>
+</div>
+<%}%>

@@ -1,0 +1,22 @@
+<%if(data){%>
+<div class="shortfall">
+    <div class="amount">
+        <p>恭喜您，已经成功激活应花分期</p>
+        <label>￥<%=data.limit%></label>
+        <p class="red">您的应花分期额度不足以支付当前订单</p>
+    </div>
+    <div class="order filed-block">
+        <ul>
+            <li>
+                <label>订单金额</label>
+                <p><%=data.amount%>元</p>
+            </li>
+            <li>
+                <label>差额</label>
+                <p class="red"><%=data.difference%>元</p>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-button"><button class="action btn-red">选择其他付款方式</button></div>
+</div>
+<%}%>

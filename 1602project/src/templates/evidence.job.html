@@ -1,0 +1,37 @@
+<%if(data){%>
+<div class="evidence">
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>工作证明</label>
+                <div class="upload-pic clear">
+                    <span class="t">上传图片格式工作证明材料。</span>
+                    <div class="pic">
+                        <input type="file" capture="camera" />
+                        <div class="report" id="jobFile">
+                            <%if(data.jobPicUrl){%>
+                            <img src="<%=data.jobPicUrl%>"/>
+                            <%}%>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <label>财力证明</label>
+                <div class="upload-pic clear">
+                    <span class="t">上传图片格式财力证明材料。</span>
+                    <div class="pic">
+                        <input type="file" capture="camera" />
+                        <div class="report" id="moneyFile">
+                            <%if(data.incomePicUrl){%>
+                            <img src="<%=data.incomePicUrl%>"/>
+                            <%}%>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-button"><button class="action">提交</button></div>
+</div>
+<%}%>

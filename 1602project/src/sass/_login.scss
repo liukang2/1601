@@ -1,0 +1,78 @@
+.login{
+  .t{
+    position: relative;
+    padding: .5rem .8rem 0 1.3rem;
+    font-size: .6rem;
+    line-height: .85rem;
+    color: $hGreyColor;
+  }
+  .t:before{
+    content: '';
+    position: absolute;
+    left: .8rem;
+    top: .8rem;
+    display: block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: .1rem;
+    background: $baseColor;
+  }
+  .x{
+    padding: .5rem .8rem;
+    font-size: .6rem;
+    color: $greyColor;
+    line-height: .85rem;
+  }
+  .f{
+    padding: .5rem .8rem 0 0;
+    text-align: right;
+  }
+  .button{
+    padding: .8rem .8rem 0 .8rem;
+    button{
+      display: block;
+      width: 100%;
+      height: 2rem;
+      line-height: 2rem;
+      background: $baseColor;
+      color: $whiteColor;
+      border-radius: .2rem;
+      font-size: .75rem;
+    }
+  }
+  a{
+    color: $blueColor;
+  }
+}
+.register{
+  li{
+    padding-left: 0!important;
+  }
+  li:last-child{
+    padding-right: 5rem;
+  }
+  .pic-code{
+    padding: .6rem 1.5rem 0 1.5rem;
+    line-height: 0;
+    img{
+      float: left;
+      border: 1px solid #ddd;
+    }
+  }
+  .phone-code{
+    z-index: 5;
+    position: absolute;
+    top: .3rem;
+    right: 0;
+    height: 1.4rem;
+    line-height: 1.42rem;
+    padding: 0 .4rem;
+    border-radius: .1rem;
+    background: $blueColor;
+    color: $whiteColor;
+  }
+  .disabled{
+    background: $hGreyColor;
+    color: $whiteColor;
+  }
+}

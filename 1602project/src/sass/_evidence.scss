@@ -1,0 +1,48 @@
+.degree{
+  background: #fff;
+  margin-top: .5rem;
+  border: 1px solid $greyBorder;
+  text-align: center;
+  .upload-pic{
+    width: 15.2rem;
+    margin: 0 auto;
+  }
+  label{
+    display: block;
+    width: 14.4rem;
+    padding: .5rem 0;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 0 auto;
+    color: $greyColor;
+  }
+  .pic{
+    float: left;
+    margin: 0 .4rem;
+  }
+  .filed-block{
+    ul{
+      li{
+        padding-left: 0;
+      }
+    }
+  }
+}
+.evidence-degree{
+  .t{
+    position: relative;
+    padding: 0 .8rem 0 1.3rem;
+    margin-top: .3rem;
+    color: $hGreyColor;
+  }
+  .t:before{
+    content: '';
+    position: absolute;
+    left: .8rem;
+    top: .35rem;
+    display: block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: .1rem;
+    background: $baseColor;
+  }
+}

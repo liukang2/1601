@@ -1,0 +1,54 @@
+<%if(data){%>
+<div class="my">
+    <div class="desc">
+        <span class="_a">你的账号：<%=data.phone%></span>
+        <a class="_m" data-page="MyInfo" href="javascript:;">我的应花资料</a>
+        <h4>
+            <label>应花分期额度</label>
+            <%if(data.isActivation == "1"){%>
+            ￥<%=data.limit%>
+            <%}else{%>
+            ￥2000-20000
+            <%}%>
+        </h4>
+        <%if(data.isActivation == "0"){%>
+        <a class="_o" data-page="Activation" href="javascript:;">激活额度</a>
+        <%}%>
+        <%if(data.isActivation == "1" && data.limit == 0){%>
+        <a class="_o" data-page="Activation" href="javascript:;">重新激活额度</a>
+        <%}%>
+    </div>
+    <div class="menu-block">
+        <ul>
+            <li>
+                <%if(data.hasOrder == "0"){%>
+                <a href="javascript:;">
+                    <label>没有待还款订单</label>
+                </a>
+                <%}else{%>
+                    <%if(data.orderStatus == "3"){%>
+                    <a data-page="OrderDetail" href="javascript:;">
+                        <label>订单详情</label>
+                        <i class="icon icon-arrow-right"></i>
+                    </a>
+                    <ol>
+                        <li><label>当前应还</label><span><%=data.myBill.currentShouldRepay%>元</span></li>
+                        <li><label>还款日</label><span>
+                            <%=data.myBill.monthlyRepayDay%>
+                        </span></li>
+                    </ol>
+                    <%}else{%>
+                    <a data-page="OrderDetail" href="javascript:;">
+                        <label>您的应花分期订单正在审核中</label>
+                        <i class="icon icon-arrow-right"></i>
+                    </a>
+                    <%}%>
+                <%}%>
+            </li>
+        </ul>
+    </div>
+    <%if(data.hasOrder == "1"){%>
+    <div class="submit-button"><button class="action btn-red">去还款</button></div>
+    <%}%>
+</div>
+<%}%>

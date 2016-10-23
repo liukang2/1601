@@ -1,0 +1,32 @@
+<%if(data){%>
+<div class="dwelling-info">
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>住房性质</label>
+                <p><input id="liveType" value="<%=data.liveType%>" data-value="<%=data.liveType%>" type="text" readonly placeholder="请选择"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <label>住址电话</label>
+                <p><input id="telphone" type="number" value="<%=data.tel%>" placeholder="输入你的住宅电话"/></p>
+            </li>
+            <li>
+                <label>证明材料</label>
+                <div class="upload-pic clear">
+                    <span class="t">图片格式，例如：租房合同、房产证、门牌号等照片。</span>
+                    <div class="pic">
+                        <input type="file" capture="camera" />
+                        <div id="livePicUrl" class="report">
+                            <%if(data.livePicUrl){%>
+                            <img src="<%=data.livePicUrl%>"/>
+                            <%}%>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-button"><button class="action">提交</button></div>
+</div>
+<%}%>

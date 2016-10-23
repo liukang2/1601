@@ -1,0 +1,104 @@
+@import "compass/css3";
+@import 'var.scss';
+
+html,body,div,ul,ol,li,p,button,input,textarea,h1,h2,h3,h4,h5,h6,dl,dt,dd,a,span,label{padding: 0;margin: 0;}
+html{font-size: 20px;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+body{font-family: 'Microsoft yahei', arial, tahoma;font-size: $fontSize;background-color: $bodyBgColor;max-width: $mWidth;margin: 0 auto;}
+li{list-style: none;}
+a{text-decoration: none;}
+i,em{font-style: normal;}
+input,button,select,textarea{font-family: 'Microsoft yahei', arial, tahoma;font-size: $fontSize;background: transparent;color: $blackColor;border: 0;outline: none;}
+input::-webkit-input-placeholder{color: $placeholderColor;}
+input::-moz-input-placeholder{color: $placeholderColor;}
+input::-ms-input-placeholder{color: $placeholderColor;}
+select{-webkit-appearance: none;-moz-appearance: none;-ms-appearance: none;background: none;border-radius: 0;}
+button{cursor: pointer;}
+.clear:after,.clear:before{display: table;content: '';}
+.clear:after{clear: both;}
+.red{color: $baseColor!important;}
+.blue{color: $blueColor!important;}
+.grey{color: $greyColor!important;}
+.purple{color: $purple!important;}
+.hGrey{color: $hGreyColor!important;}
+.black{color: $blackColor!important;}
+
+.wrap-page{
+  margin-bottom: .8rem;
+}
+
+/*非必填项提交*/
+.submit-button{
+  padding: .8rem .8rem 0 .8rem;
+  button{
+    width: 100%;
+    height: 2rem;
+    line-height: 2rem;
+    background: $blueColor;
+    border-radius: .2rem;
+    color: $whiteColor;
+    font-size: .75rem;
+  }
+  .btn-red{
+    background: $baseColor;
+  }
+}
+
+/*上传图片*/
+.upload-pic{
+  padding: .5rem 0;
+  .pic{
+    position: relative;
+    float: right;
+    width: 3rem;
+    height: 3rem;
+    background: $no-pic no-repeat center center;
+    background-size: cover;
+    input{
+      z-index: 2;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: inherit;
+      height: inherit;
+      opacity: 0;
+    }
+    div{
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: inherit;
+      height: inherit;
+      img{
+        display: block;
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+  .t{
+    float: left;
+    width: 7rem;
+    line-height: 1rem!important;
+    color: $hGreyColor;
+  }
+}
+
+
+
+@import '_header.scss';
+@import '_menu_block.scss';
+@import '_filed_block.scss';
+@import '_my.scss';
+@import '_login.scss';
+@import '_mobile_supplyname.scss';
+@import '_internet_info.scss';
+@import '_evidence.scss';
+@import '_shortfall.scss';
+@import '_repayment.scss';
+@import '_picker_ios.scss';
+@import '_pop_toast.scss';
+@import '_loading.scss';
+
+@import '_open_service.scss';
+@import '_protocol.scss';

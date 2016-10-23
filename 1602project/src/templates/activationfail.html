@@ -1,0 +1,11 @@
+<%if(data){%>
+<div class="openfail">
+    <p class="red">
+        <i></i>
+        由于综合评分不足，您的应花分期额度激活失败
+    </p>
+</div>
+<%if(data.rule == "HasOrder"){%>
+<div class="submit-button"><button class="action btn-red">选择其他付款方式</button></div>
+<%}%>
+<%}%>

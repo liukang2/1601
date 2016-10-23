@@ -1,0 +1,29 @@
+<%if(data){%>
+<div class="job-info">
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>单位名称</label>
+                <p><input id="companyName" value="<%=data.name%>" type="text" placeholder="输入您的单位名称"/></p>
+            </li>
+            <li>
+                <label>单位电话</label>
+                <p><input id="companyTel" value="<%=data.tel%>" type="text" placeholder="区号-电话号码-分机号"/></p>
+            </li>
+            <li>
+                <label>月均收入</label>
+                <p><input id="income" value="<%=data.income%>" data-value="<%=data.income%>" type="text" readonly placeholder="请选择"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li class="no">
+                <label>单位地址</label>
+                <p><input id="area" type="text" value="<%=data.pcd%>" data-fid="<%=data.addressProvince%>" data-sid="<%=data.addressCity%>" data-tid="<%=data.addressDistrict%>" readonly placeholder="请选择"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <p><textarea id="jobAddress" placeholder="街道详细地址"><%=data.jobAddress%></textarea></p>
+            </li>
+        </ul>
+    </div>
+</div>
+<%}%>

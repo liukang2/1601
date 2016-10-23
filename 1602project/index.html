@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+    <meta content="telephone=no" name="format-detection">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <meta name="renderer" content="webkit">
+    <title>应花分期</title>
+    <link rel="stylesheet" href="src/css/var.css"/>
+    <link rel="stylesheet" href="src/css/base.css"/>
+
+    <!--core scripts-->
+    <script src="dist/js/lib/jquery-min.js"></script>
+    <script src="dist/js/lib/jquery-md5.js"></script>
+    <script src="dist/js/lib/framework7-min.js"></script>
+    <script src="dist/js/lib/rsa.min.js"></script>
+
+    <script src="dist/js/common.js"></script>
+</head>
+<body onselectstart="return false">
+    <header></header>
+    <div class="wrap-page" id="mainBody"></div>
+    <footer></footer>
+
+    <div id="loadingLayer" style="display: block;">
+        <div class="loading-layer">
+            <div class="loading"></div>
+            <div class="loading2"></div>
+            <label>loading</label>
+        </div>
+    </div>
+
+    <div id="computeLayer" class="calculations" style="display: none;">
+        <div class="compute-layer">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <label>计算您的应花分期额度中...</label>
+        </div>
+    </div>
+
+    <div id="maskLayer" class="mask-layer ani-mask-show" style="display: block;"></div>
+    <script src="dist/js/base.js"></script>
+</body>
+</html>

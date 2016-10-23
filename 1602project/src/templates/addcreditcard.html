@@ -1,0 +1,41 @@
+<%if(data){%>
+
+<div class="add-credit-card">
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>卡号</label>
+                <p>
+                    <%if(data.creditcardNum){%>
+                    <input class="cardNum" type="number" value="<%=data.creditcardNum%>" readonly placeholder="本人信用卡号"/>
+                    <%}else{%>
+                    <input class="cardNum" type="number" placeholder="本人信用卡号"/>
+                    <%}%>
+                </p>
+            </li>
+            <li>
+                <label>发卡银行</label>
+                <p>
+                    <%if(data.creditBankName){%>
+                    <input class="bankName" type="text" value="<%=data.creditBankName%>" data-value="<%=data.creditBankName%>" readonly placeholder="请选择"/>
+                    <%}else{%>
+                    <input class="bankName" id="bankName" type="text" readonly placeholder="请选择"/>
+                    <%}%>
+                </p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <label>信用额度</label>
+                <p><input id="amountLimit" type="text" value="<%=data.amountLimit%>" data-value="<%=data.amountLimit%>" readonly placeholder="最高信用额度"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <label>有效期</label>
+                <p><input id="issuingTime" type="text" value="<%=data.issuingTime%>" data-value="<%=data.issuingTime%>" readonly placeholder="月/年"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-button"><button class="action">提交</button></div>
+</div>
+<%}%>

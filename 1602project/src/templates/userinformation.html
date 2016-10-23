@@ -1,0 +1,112 @@
+<%if(data){%>
+<%if(data.isActivation == "0"){%>
+<p class="open-tips">您的资料越完善，您获得的应花分期额度将越高。</p>
+<%}%>
+
+<%function _v(s){var r;if(s=='0'){r='待完善'} else if(s=='1'){r='已完善'} else{r='去填写'}; return r;}%>
+
+<div class="open-service">
+    <div class="menu-block">
+        <ul>
+            <li>
+                <a data-page="Identity" href="javascript:;">
+                    <label>身份认证</label>
+                    <span><%=_v(data.identityStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="menu-block">
+        <div class="hd">
+            <h3>必填资料</h3>
+        </div>
+        <ul>
+            <li>
+                <a data-page="Jobs" href="javascript:;">
+                    <label>工作信息</label>
+                    <span><%=_v(data.jobinfoStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="Contact" href="javascript:;">
+                    <label>联系信息</label>
+                    <span><%=_v(data.mainContactStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="SesameCredit" href="javascript:;">
+                    <label>芝麻信用</label>
+                    <%if(data.sesameStatus == '0'){%>
+                    <span>去认证</span>
+                    <%}else if(data.sesameStatus == '2'){%>
+                    <span>暂时跳过，去认证</span>
+                    <%}else{%>
+                    <span class="blue"><%=data.sesame%>分</span>
+                    <%}%>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <%if(data.isActivation == "0" || data.limit == 0){%>
+    <div class="open-button">
+        <button class="action">激活额度</button>
+        <p>激活应花额度前，请确保您的资料已经充分完善。</p>
+    </div>
+    <%}%>
+    <div class="menu-block">
+        <div class="hd">
+            <h3>补充资料</h3>
+            <p>获得更高额度和审核通过率</p>
+        </div>
+        <ul>
+            <li>
+                <a data-page="CreditCard" href="javascript:;">
+                    <label>信用卡</label>
+                    <span><%=_v(data.creditCardStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="MobileSupplyName" href="javascript:;">
+                    <label>手机运营商认证</label>
+                    <span><%=_v(data.operatorStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="Internet" href="javascript:;">
+                    <label>互联网信息</label>
+                    <span><%=_v(data.internetStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="Dwelling" href="javascript:;">
+                    <label>居住信息</label>
+                    <span><%=_v(data.liveinfoStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="MoreContact" href="javascript:;">
+                    <label>补充联系人</label>
+                    <span><%=_v(data.minorContactStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+            <li>
+                <a data-page="Evidence" href="javascript:;">
+                    <label>证明材料</label>
+                    <span><%=_v(data.proveStatus)%></span>
+                    <i class="icon icon-arrow-right"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<%}%>

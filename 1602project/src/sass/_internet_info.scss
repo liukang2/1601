@@ -1,0 +1,18 @@
+.internet-info{
+  .t{
+    position: relative;
+    padding: .5rem .8rem 0 1.3rem;
+    color: $hGreyColor;
+  }
+  .t:before{
+    content: '';
+    position: absolute;
+    left: .8rem;
+    top: .8rem;
+    display: block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: .1rem;
+    background: $baseColor;
+  }
+}

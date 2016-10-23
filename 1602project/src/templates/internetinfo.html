@@ -1,0 +1,30 @@
+<%if(data){%>
+<div class="internet-info">
+    <p class="t">所涉信息均已作加密处理，请放心填写。</p>
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>微信号</label>
+                <p><input id="wechat" value="<%=data.wchat%>" type="text" placeholder="输入你的微信号"/></p>
+            </li>
+            <li>
+                <label>QQ号</label>
+                <p><input id="qq" value="<%=data.qq%>" type="number" placeholder="输入你的QQ号"/></p>
+            </li>
+            <li>
+                <label>常用邮箱</label>
+                <p><input id="email" value="<%=data.email%>" type="email" placeholder="输入你常用的邮箱"/></p>
+            </li>
+            <li>
+                <label>新浪账号</label>
+                <p><input id="sina" value="<%=data.sina%>" type="text" placeholder="输入你的新浪账号"/></p>
+            </li>
+            <li>
+                <label>淘宝账号</label>
+                <p><input id="taobao" value="<%=data.taobao%>" type="text" placeholder="输入你的淘宝账号"/></p>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-button"><button class="action">提交</button></div>
+</div>
+<%}%>

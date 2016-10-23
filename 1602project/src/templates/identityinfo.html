@@ -1,0 +1,83 @@
+<%if(data){%>
+<div class="identity-info">
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>姓名</label>
+                <p>
+                    <%if(data._base.realName){%>
+                    <input id="realName" type="text" value="<%=data._base.realName%>" readonly placeholder="输入您的真实姓名"/>
+                    <%}else{%>
+                    <input id="realName" type="text" placeholder="输入您的真实姓名"/>
+                    <%}%>
+                </p>
+            </li>
+            <li>
+                <label>身份证号</label>
+                <p>
+                    <%if(data._base.cardId){%>
+                    <input id="cardId" type="text" value="<%=data._base.cardId%>" readonly placeholder="输入您的身份证号码"/>
+                    <%}else{%>
+                    <input id="cardId" type="text" placeholder="输入您的身份证号码"/>
+                    <%}%>
+                </p>
+            </li>
+            <li class="no">
+                <label>常住地址</label>
+                <p><input id="area" type="text" value="<%=data._base.pcd%>" data-fid="<%=data._base.addressProvince%>" data-sid="<%=data._base.addressCity%>" data-tid="<%=data._base.addressDistrict%>" readonly placeholder="请选择"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <p><textarea id="address" placeholder="街道详细地址"><%=data._base.address%></textarea></p>
+            </li>
+            <li>
+                <label>学历</label>
+                <p><input id="edu" type="text" value="<%=data._base.edu%>" data-value="<%=data._base.edu%>" readonly placeholder="请选择"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <label>婚姻</label>
+                <p><input id="marital" type="text" value="<%=data._base.marriage%>" data-value="<%=data._base.marriage%>" readonly placeholder="请选择"/></p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+        </ul>
+    </div>
+
+    <h3>请填写您的收款银行卡</h3>
+    <div class="filed-block">
+        <ul>
+            <li>
+                <label>开户行</label>
+                <p>
+                    <%if(data._bank.bankName){%>
+                    <input class="bankName" type="text" value="<%=data._bank.bankName%>" data-value="<%=data._bank.bankName%>" readonly placeholder="请选择"/>
+                    <%}else{%>
+                    <input id="bankName" class="bankName" type="text" readonly placeholder="请选择"/>
+                    <%}%>
+                </p>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+            <li>
+                <label>银行卡</label>
+                <p>
+                    <%if(data._bank.cardNum){%>
+                    <input id="cardNum" type="number" value="<%=data._bank.cardNum%>" readonly placeholder="输入本人借记卡号码"/>
+                    <%}else{%>
+                    <input id="cardNum" type="number" placeholder="输入本人借记卡号码"/>
+                    <%}%>
+                </p>
+            </li>
+            <li>
+                <label>预留手机</label>
+                <p>
+                    <%if(data._bank.phoneNum){%>
+                    <input id="phone" type="tel" value="<%=data._bank.phoneNum%>" readonly maxlength="11" placeholder="输入银行预留手机号"/>
+                    <%}else{%>
+                    <input id="phone" type="tel" maxlength="11" placeholder="输入银行预留手机号"/>
+                    <%}%>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<%}%>

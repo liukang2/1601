@@ -1,0 +1,31 @@
+.header{
+  z-index: 965;
+  position: relative;
+  height: 2rem;
+  line-height: 2rem;
+  background: $baseColor;
+  color: $whiteColor;
+  a{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    color: inherit;
+  }
+  .back{
+    left: 0;
+    width: 2rem;
+    background: $icon-arrow-left no-repeat center center;
+    background-size: 22%;
+  }
+  h2{
+    text-align: center;
+    line-height: inherit;
+    font-size: .75rem;
+  }
+  .btn{
+    right: 0;
+    width: 2.8rem;
+  }
+}

@@ -1,0 +1,59 @@
+<%if(data){%>
+<div class="repayment">
+    <%if(data.maxOverdueDays > 0){%>
+    <p class="t">借款最大逾期天数已达<%=data.maxOverdueDays%>天，请尽快还款！</p>
+    <%}%>
+    <div class="list detail panel">
+        <%if(data.singleDetail.length > 0){%>
+            <%_.each(data.singleDetail, function(item){%>
+
+            <%if(item.repayStatus == "1"){%>
+            <div data-status="repay" data-show="N" class="item">
+            <%}else{%>
+                <%if(item.isOverdue == "1"){%>
+            <div data-status="delay" data-show="N" data-checked="Y" class="item">
+                <%}else{%>
+            <div data-status="wait" data-show="N" data-checked="N" class="item">
+                <%}%>
+            <%}%>
+                <div class="hd">
+                    <p class="radio">
+                        <span><%=item.period%>期</span>
+                    </p>
+                    <p>应还 <span class="money"><%=item.shouldRepay%></span>元</p>
+                    <p class="arrow">
+                        <%if(item.repayStatus == "1"){%>
+                            <span class="hGrey">已还款</span>
+                        <%}else{%>
+                            <%if(item.overdueDays > 0){%>
+                                <span class="red">已逾期<%=item.overdueDays%>天</span>
+                            <%}else{%>
+                                <%if(item.toRefundDays == 0){%>
+                                <span class="purple">今天是您的还款日</span>
+                                <%}else{%>
+                                <span class="purple">距还款日<%=item.toRefundDays%>天</span>
+                                <%}%>
+                            <%}%>
+                        <%}%>
+
+                        <i class="icon-arrow-up"></i>
+                    </p>
+                </div>
+                <div class="content">
+                    <ul class="clear">
+                        <li><label>应还款日</label><%=item.shouldRepayDay%></li>
+                        <%if(item.actualRepayDay){%>
+                        <li><label>实际还款日</label><%=item.actualRepayDay%></li>
+                        <%}%>
+                        <li><label>本期金额</label><%=item.currentAmount%>元</li>
+                        <li><label>逾期费用</label><%=item.overdueFee%>元</li>
+                        <li><label>滞纳金</label><%=item.delayingFee%>元</li>
+                        <li class="black"><label>本期应还总额</label><%=item.shouldRepay%>元</li>
+                    </ul>
+                </div>
+            </div>
+            <%})%>
+        <%}%>
+    </div>
+</div>
+<%}%>

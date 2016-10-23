@@ -1,0 +1,75 @@
+.my{
+  .desc{
+    position: relative;
+    min-height: 5rem;
+    padding: .8rem;
+    background: #fff;
+    ._a,._m{
+      position: absolute;
+      top: .8rem;
+    }
+    ._a{
+      left: .8rem;
+      color: $greyColor;
+    }
+    ._m{
+      right: .8rem;
+      display: block;
+      height: .8rem;
+      color: $blueColor;
+      background: $my no-repeat 0 .07rem;
+      background-size: auto 100%;
+      padding-left: 1rem;
+    }
+    h4{
+      padding-top: 1.6rem;
+      font-weight: normal;
+      font-size: 1.5rem;
+      color: $blackColor;
+      text-align: center;
+      label{
+        display: block;
+        font-size: .7rem;
+      }
+    }
+    ._o{
+      display: block;
+      width: 7rem;
+      height: 1.8rem;
+      line-height: 1.8rem;
+      background: $baseColor;
+      margin: .5rem auto 0 auto;
+      border-radius: .2rem;
+      color: $whiteColor;
+      text-align: center;
+      font-size: .7rem;
+    }
+  }
+  ol{
+    li{
+      position: relative;
+      min-height: 2rem;
+      line-height: 2rem;
+      border-top: 1px solid #e0e8e0;
+      color: $hGreyColor;
+      span{
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
+/*订单详情*/
+.order-detail{
+  li{
+    min-height: 2rem;
+    padding-left: 4.5rem!important;
+    p{
+      line-height: .9rem;
+      padding: .52rem 0;
+      color: $greyColor;
+    }
+  }
+}

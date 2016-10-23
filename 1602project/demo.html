@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="shim_modules/jquery-min.js"></script>
+    <link rel="stylesheet" href="src/css/base.css"/>
+    <style>
+        .item{margin-top: 20px;}
+        .item p{display: inline-block;}
+        .radio i{display: inline-block;width: 10px;height: 10px;}
+                i.unchecked{background-color: grey;}
+                i.checked{background-color: red;}
+        .arrow{float: right;}
+        .arrow i{display: inline-block;width: 10px;height: 10px;}
+                i.icon-arrow-up{background-color: green;}
+                i.icon-arrow-down{background-color: orange;}
+    </style>
+
+</head>
+<body>
+
+<ul id="test">
+    <li>这是第一条</li>
+    <li>这是第二条</li>
+    <li>这是第三条</li>
+</ul>
+
+
+
+本次还款金额：<span id="amount">4220.00</span>元
+
+
+    <div data-status="repay" data-show="N" class="item">
+        <p class="radio">
+            <i class="unchecked"></i>
+            <span>1期</span>
+        </p>
+        <p>应还 <span class="money">2110.00</span>元</p>
+        <p class="arrow">
+            <span>已还款</span>
+            <i class="icon-arrow-up"></i>
+        </p>
+    </div>
+
+    <div data-status="delay" data-show="N" class="item">
+        <p class="radio">
+            <i class="checked"></i>
+            <span>2期</span>
+        </p>
+        <p>应还 <span class="money">2110.00</span>元</p>
+        <p class="arrow">
+            <span>已逾期5天</span>
+            <i class="icon-arrow-up"></i>
+        </p>
+    </div>
+
+    <div data-status="wait" data-show="N" data-checked="Y" class="item">
+        <p class="radio">
+            <i class="checked"></i>
+            <span>3期</span>
+        </p>
+        <p>应还 <span class="money">2110.00</span>元</p>
+        <p class="arrow">
+            <span>距还款日10天</span>
+            <i class="icon-arrow-up"></i>
+        </p>
+    </div>
+
+    <div data-status="wait" data-show="N" data-checked="N" class="item">
+        <p class="radio">
+            <i class="unchecked"></i>
+            <span>4期</span>
+        </p>
+        <p>应还 <span class="money">2110.00</span>元</p>
+        <p class="arrow">
+            <span>距还款日20天</span>
+            <i class="icon-arrow-up"></i>
+        </p>
+    </div>
+
+    <div data-status="wait" data-show="N" data-checked="N" class="item">
+        <p class="radio">
+            <i class="unchecked"></i>
+            <span>5期</span>
+        </p>
+        <p>应还 <span class="money">2110.00</span>元</p>
+        <p class="arrow">
+            <span>距还款日30天</span>
+            <i class="icon-arrow-up"></i>
+        </p>
+    </div>
+
+    <script src="demo.js"></script>
+
+</body>
+</html>

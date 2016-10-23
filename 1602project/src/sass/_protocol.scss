@@ -1,0 +1,60 @@
+.protocol{
+  padding: .5rem .8rem;
+  font-size: .65rem;
+  line-height: .95rem;
+  color: $blackColor;
+  background-color: #fff;
+  h3{
+    font-size: .7rem;
+    color: $blackColor;
+  }
+  h5{
+    font-size: .65rem;
+  }
+  .block{
+    padding-bottom: .8rem;
+  }
+  p{
+    padding: .18rem 0;
+    i{
+      text-decoration: underline;
+      font-weight: bold;
+    }
+  }
+  p.no{
+    text-align: right;
+    padding: 0;
+  }
+  dl{
+    dt{
+      padding-top: .3rem;
+      color: $blackColor;
+      font-weight: bold;
+    }
+    dt:first-child{
+      padding-top: 0;
+    }
+  }
+  dl.proInfo{
+    margin-top: .3rem;
+    dt{
+      font-weight: normal;
+    }
+  }
+  table{
+    background-color: $greyBorder;
+    font-size: .6rem;
+    th,td{
+      background-color: #fff;
+      text-align: left;
+      padding: .15rem .25rem;
+      font-weight: normal;
+    }
+    th{
+      width: 35%;
+    }
+    td{
+      width: 65%;
+    }
+  }
+}

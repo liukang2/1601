@@ -1,0 +1,20 @@
+{
+  "status": "1",
+  "data": {
+    "recentlyRefundDays": 5,
+    "settleAmount": 3900,
+    "remainingPeriod": 2,
+    "monthlyRepayDay": 16,
+    "maxOverdueDays": 20,
+    "singleDetail": [
+      {
+        "period": 1,
+        "shouldRepay": 2000,
+        "isOverdue": "1",
+        "toRefundDays": 0
+      }
+    ]
+  },
+  "msg": "",
+  "error": ""
+}

@@ -1,0 +1,98 @@
+<%if(data){%>
+<div class="repayment">
+    <%if(data.maxOverdueDays > 0){%>
+    <p class="t">距还款日<%=data.recentlyRefundDays%>天</p>
+    <%}%>
+    <div class="total panel">
+        <p>
+            本次还款金额
+            <em>￥<i id="amount"><%=data.currentShouldRepay%></i></em>
+        </p>
+        <span class="s">还款日 <i class="red"><%=data.monthlyRepayDay%></i></span>
+        <span class="d">
+            <%if(data.recentlyRefundDays > 0){%>
+            距离还款日<%=data.recentlyRefundDays%>天
+            <%}else{%>
+            今天是您的还款日
+            <%}%>
+        </span>
+    </div>
+
+    <div class="list panel">
+        <%if(data.singleDetail.length > 0){%>
+            <%_.each(data.singleDetail, function(item, key){%>
+
+            <%if(item.repayStatus == "1"){%>
+            <div data-status="repay" data-show="N" class="item">
+            <%}else{%>
+                <%if(item.isOverdue == "1"){%>
+            <div data-status="delay" data-show="N" data-checked="Y" data-periods="<%=item.period%>" class="item">
+                <%}else{%>
+                    <%if(item.isOverdue == "0" && key-1 == 0){%>
+            <div data-status="wait" data-show="N" data-checked="Y" data-periods="<%=item.period%>" class="item">
+                    <%}else{%>
+            <div data-status="wait" data-show="N" data-checked="N" data-periods="<%=item.period%>" class="item">
+                    <%}%>
+                <%}%>
+            <%}%>
+                <div class="hd">
+                    <p class="radio">
+                        <%if(item.isOverdue == "1"){%>
+                            <i class="checked"></i>
+                        <%}else{%>
+                            <%if(key-1 == 0){%>
+                            <i class="checked"></i>
+                            <%}else{%>
+                            <i class="unchecked"></i>
+                            <%}%>
+                        <%}%>
+                        <span><%=item.period%>期</span>
+                    </p>
+                    <p>应还 <span class="money"><%=item.shouldRepay%></span>元</p>
+                    <p class="arrow">
+                        <%if(item.repayStatus == "1"){%>
+                        <span class="hGrey">已还款</span>
+                        <%}else{%>
+                            <%if(item.overdueDays > 0){%>
+                            <span class="red">已逾期<%=item.overdueDays%>天</span>
+                            <%}else{%>
+                                <%if(item.toRefundDays == 0){%>
+                                <span class="purple">今天是您的还款日</span>
+                                <%}else{%>
+                                <span class="purple">距还款日<%=item.toRefundDays%>天</span>
+                                <%}%>
+                            <%}%>
+                        <%}%>
+
+                        <i class="icon-arrow-up"></i>
+                    </p>
+                </div>
+                <div class="content">
+                    <ul class="clear">
+                        <li><label>本期金额</label><%=item.currentAmount%>元</li>
+                        <li><label>应还款日</label><%=item.shouldRepayDay%></li>
+                        <li><label>逾期费用</label><%=item.overdueFee%>元</li>
+                        <li><label>滞纳金</label><%=item.delayingFee%>元</li>
+                    </ul>
+                </div>
+            </div>
+            <%})%>
+        <%}%>
+    </div>
+
+    <div class="ft panel">
+        <ul>
+            <li>
+                全部结清还需
+                <span><em id="surplus"><%=data.settleAmount%></em>元</span>
+            </li>
+            <li id="viewDetail">
+                本次分期明细
+                <span>剩余<%=data.remainingPeriod%>期</span>
+                <i class="icon icon-arrow-right"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="submit-button"><button class="action">百度支付还款</button></div>
+</div>
+<%}%>

@@ -1,0 +1,43 @@
+<%if(data){%>
+<div class="evidence-degree">
+    <div class="degree">
+        <label>上传图片格式学历证明材料</label>
+        <div class="upload-pic clear">
+            <div class="pic">
+                <input type="file" capture="camera" />
+                <div class="report" id="eduFile1">
+                    <%if(data.eduPicUrl && data.eduPicUrl[0]){%>
+                    <img src="<%=data.eduPicUrl[0]%>"/>
+                    <%}%>
+                </div>
+            </div>
+            <div class="pic">
+                <input type="file" capture="camera" />
+                <div class="report" id="eduFile2">
+                    <%if(data.eduPicUrl && data.eduPicUrl[1]){%>
+                    <img src="<%=data.eduPicUrl[1]%>"/>
+                    <%}%>
+                </div>
+            </div>
+            <div class="pic">
+                <input type="file" capture="camera" />
+                <div class="report" id="eduFile3">
+                    <%if(data.eduPicUrl && data.eduPicUrl[2]){%>
+                    <img src="<%=data.eduPicUrl[2]%>"/>
+                    <%}%>
+                </div>
+            </div>
+            <div class="pic">
+                <input type="file" capture="camera" />
+                <div class="report" id="eduFile4">
+                    <%if(data.eduPicUrl && data.eduPicUrl[3]){%>
+                    <img src="<%=data.eduPicUrl[3]%>"/>
+                    <%}%>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="submit-button"><button class="action">提交</button></div>
+    <p class="t">请提供可证明学历的证书，如毕业证书、学位证书等（最多4张）。</p>
+</div>
+<%}%>
